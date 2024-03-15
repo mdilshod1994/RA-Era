@@ -1,5 +1,6 @@
 const body = document.querySelector('body')
 const promo = document.getElementById('promo')
+const promoBtnPlay = document.getElementById('promo-btn-play')
 const header = document.getElementById('header')
 const texts = document.querySelectorAll('.promo__content-text')
 window.onscroll = function() {
@@ -22,7 +23,8 @@ window.onscroll = function() {
   observer.observe(promo)
   if(this.scrollY < 10 && this.scrollY === 0){
     setTimeout(() => {
-      styleHeader(1, 'auto')
+      showHideEffect( header, 1, 'auto')
+      showHideEffect( promoBtnPlay, 1, 'auto')
     }, 800);
     texts.forEach((text, ind)=>{
       console.log(text);
@@ -37,7 +39,8 @@ window.onscroll = function() {
       }
     })
   }else{
-    styleHeader(0, 'none')
+    showHideEffect(header, 0, 'none')
+    showHideEffect(promoBtnPlay, 0, 'none')
     texts.forEach((text, ind)=>{
       if(ind === 0){
         styleText(text, 0, 0.6, 1)
@@ -51,13 +54,11 @@ window.onscroll = function() {
     })
   }
 }
-
-// style for header
-function styleHeader(opacity, events){
-  header.style.opacity = opacity
-  header.style.pointerEvents = events
+// style for show and hide elements
+function showHideEffect(item, opacity, events){
+  item.style.opacity = opacity
+  item.style.pointerEvents = events
 }
-
 // style for texts
 function styleText(item, distance, time, opacity) {
   item.style.transform = `translateX(${distance}%)`;

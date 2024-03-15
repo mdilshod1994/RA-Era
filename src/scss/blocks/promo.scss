@@ -72,12 +72,7 @@
 // 		width: 100%;
 // 		height: 100%;
 // 	}
-// 	.play {
-// 		position: absolute;
-// 		bottom: 48px;
-// 		left: calc(50% + 9px);
-// 		transform: translateX(-50%);
-// 	}
+
 // }
 // @media (max-width: 1599px) {
 // 	.promo {
@@ -291,4 +286,12 @@
         }
     }
   }
+  .play {
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: 0.3s ease-in-out;
+	}
 }
