@@ -43,10 +43,10 @@ window.onscroll = function() {
     showHideEffect(promoBtnPlay, 0, 'none')
     texts.forEach((text, ind)=>{
       if(ind === 0){
-        styleText(text, 0, 0.6, 1)
+        styleText(text, 0, 0.61, 1)
       }
       if(ind === 1){
-        styleText(text, 0, 0.65, 1)
+        styleText(text, 0, 0.66, 1)
       }
       if(ind === 2){
         styleText(text, 0, 0.8, 1)
