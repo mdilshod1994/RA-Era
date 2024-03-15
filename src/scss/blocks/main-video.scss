@@ -1,0 +1,40 @@
+.main-video {
+	&__body {
+		border-radius: 48px;
+		width: 100%;
+		height: 824px;
+		background-color: #000;
+		overflow: hidden;
+	}
+}
+@media (max-width: 1370px) {
+	.main-video {
+		&__body {
+			height: 680px;
+		}
+	}
+}
+@media (max-width: 1179px) {
+	.main-video {
+		&__body {
+			height: 550px;
+		}
+	}
+}
+@media (max-width: 1010px) {
+	.main-video {
+		&__body {
+			height: 420px;
+			border-radius: 32px;
+		}
+	}
+}
+@media (max-width: 760px) {
+	.main-video {
+		margin-top: 112px;
+		&__body {
+			height: 240px;
+			border-radius: 16px;
+		}
+	}
+}

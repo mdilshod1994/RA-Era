@@ -1,0 +1,162 @@
+.catalog {
+	position: relative;
+	z-index: 10;
+	overflow: hidden;
+	margin-bottom: 0;
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100vw;
+		left: 50%;
+		bottom: -500px;
+		transform: translateX(-50%);
+		height: 1236px;
+		z-index: 1;
+		background: linear-gradient(180deg, rgba(10, 10, 10, 0) 0%, #000 44.48%);
+	}
+	&__top {
+		max-width: 680px;
+		margin: 0 auto 140px;
+		text-align: center;
+	}
+	&__subtitle {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 133%;
+		text-transform: uppercase;
+		color: #e0e0e0;
+		margin-bottom: 76px;
+	}
+	&__title {
+		span {
+			&:last-child {
+				display: none;
+			}
+		}
+	}
+	&__desc {
+		display: none;
+		font-size: 13px;
+		line-height: 131%;
+		letter-spacing: -0.01em;
+		text-align: center;
+		color: rgba(255, 255, 255, 0.6);
+	}
+	&__wrap {
+		height: 2082px;
+		overflow: hidden;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 25px 24px;
+	}
+	&__bottom {
+		text-align: center;
+		position: relative;
+		z-index: 10;
+	}
+	.card {
+		position: relative;
+		&:nth-child(2),
+		&:nth-child(5),
+		&:nth-child(8) {
+			top: 259px;
+		}
+	}
+}
+@media (max-width: 1599px) {
+	.catalog {
+		&__wrap {
+			height: 1700px;
+		}
+	}
+}
+@media (max-width: 1370px) {
+	.catalog {
+		&__wrap {
+			height: 1490px;
+		}
+		&__top {
+			max-width: 500px;
+			margin-bottom: 100px;
+		}
+		&__subtitle {
+			margin-bottom: 48px;
+		}
+	}
+}
+@media (max-width: 1179px) {
+	.catalog {
+		&__top {
+			max-width: 420px;
+			margin-bottom: 60px;
+		}
+		&__subtitle {
+			margin-bottom: 32px;
+		}
+		&__wrap {
+			height: 1230px;
+			gap: 15px;
+		}
+		.card {
+			&:nth-child(2),
+			&:nth-child(5),
+			&:nth-child(8) {
+				top: 120px;
+			}
+		}
+	}
+}
+@media (max-width: 1010px) {
+	.catalog {
+		&__wrap {
+			height: 980px;
+			gap: 10px;
+		}
+	}
+}
+@media (max-width: 760px) {
+	.catalog {
+		padding-bottom: 100px;
+		margin-top: 112px;
+		margin-bottom: 0;
+		&__top {
+			max-width: 261px;
+			margin-bottom: 72px;
+		}
+		&__subtitle {
+			margin-bottom: 32px;
+			font-size: 10px;
+			line-height: 140%;
+			letter-spacing: -0.01em;
+		}
+		&__title {
+			font-size: 28px;
+			line-height: 114%;
+			letter-spacing: -0.03em;
+			margin-bottom: 16px;
+			span {
+				&:first-child {
+					display: none;
+				}
+				&:last-child {
+					display: block;
+				}
+			}
+		}
+		&__desc {
+			display: block;
+		}
+		&__wrap {
+			height: 1228px;
+			grid-template-columns: repeat(1, 1fr);
+			gap: 28px;
+		}
+		.card {
+			&:nth-child(2),
+			&:nth-child(5),
+			&:nth-child(8) {
+				top: 0px;
+			}
+		}
+	}
+}

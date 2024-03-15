@@ -1,0 +1,177 @@
+.footer {
+	padding-top: 104px;
+	padding-bottom: 32px;
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 104px;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+		margin-bottom: 32px;
+	}
+	&__last {
+		display: flex;
+		justify-content: space-between;
+		gap: 122.5px;
+		&-wrap {
+			display: flex;
+			justify-content: space-between;
+			gap: 122.5px;
+		}
+	}
+	&__menu {
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+			li {
+				a {
+					display: block;
+					font-family: "PolySans Trial", sans-serif;
+					font-weight: 400;
+					font-size: 32px;
+					line-height: 125%;
+					letter-spacing: -0.01em;
+					color: #fff;
+				}
+			}
+		}
+	}
+	&__bottom,
+	&__left {
+		display: flex;
+		justify-content: space-between;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 140%;
+		letter-spacing: -0.01em;
+		color: rgba(255, 255, 255, 0.3);
+		a {
+			display: inline-flex;
+			color: rgba(255, 255, 255, 0.3);
+		}
+	}
+	&__left {
+		gap: 56px;
+	}
+}
+@media (max-width: 1370px) {
+	.footer {
+		padding-top: 80px;
+		padding-bottom: 24px;
+		&__top {
+			padding-bottom: 64px;
+			margin-bottom: 24px;
+		}
+		&__last {
+			gap: 80px;
+			&-wrap {
+				gap: 80px;
+			}
+		}
+		&__menu {
+			ul {
+				li {
+					a {
+						font-size: 24px;
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 1179px) {
+	.footer {
+		&__menu {
+			ul {
+				li {
+					a {
+						font-size: 22px;
+					}
+				}
+			}
+		}
+		&__bottom,
+		&__left {
+			font-size: 18px;
+		}
+	}
+}
+@media (max-width: 1010px) {
+	.footer {
+		padding-top: 60px;
+		padding-bottom: 20px;
+		&__top {
+			padding-bottom: 48px;
+			margin-bottom: 20px;
+		}
+		&__last {
+			gap: 48px;
+			&-wrap {
+				gap: 48px;
+			}
+		}
+		&__bottom,
+		&__left {
+			font-size: 16px;
+		}
+		&__menu {
+			ul {
+				li {
+					a {
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 760px) {
+	.footer {
+		&__top {
+			flex-wrap: wrap;
+			padding-bottom: 96px;
+			margin-bottom: 12px;
+		}
+		&__logo {
+			width: 80px;
+			height: 28px;
+		}
+		&__last {
+			gap: 15px;
+			margin-top: 48px;
+			width: calc(100% + 10px);
+			margin-right: -2px;
+			&-wrap {
+				gap: 36px;
+			}
+		}
+		&__menu {
+			ul {
+				gap: 6px;
+				li {
+					a {
+						font-size: 13px;
+						line-height: 138%;
+						letter-spacing: -0.01em;
+					}
+				}
+			}
+		}
+		&__bottom,
+		&__left {
+			font-weight: 400;
+			font-size: 13px;
+			line-height: 138%;
+			letter-spacing: -0.01em;
+			color: rgba(255, 255, 255, 0.3);
+		}
+		&__left {
+			flex-direction: column;
+			gap: 0;
+		}
+		&__developer {
+			max-width: 82px;
+			text-align: right;
+		}
+	}
+}
