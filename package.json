@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp"
+    "dev": "gulp",
+    "deploy": "gh-pages -d docs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "homepage": "https://github.com/mdilshod1994/RA-Era",
   "devDependencies": {
     "@babel/core": "^7.11.4",
     "@babel/preset-env": "^7.11.0",
@@ -30,6 +32,7 @@
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "focus-visible": "^5.1.0",
+    "gh-pages": "^6.1.1",
     "gsap": "^3.5.1",
     "jquery": "^3.5.1",
     "jquery.maskedinput": "^1.4.1",
