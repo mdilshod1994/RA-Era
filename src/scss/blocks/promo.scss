@@ -207,23 +207,22 @@
   height: 100svh;
   display: flex;
   align-items: flex-end;
-  margin-top: 0px;
-  transition-delay: 0.3s;
   justify-content: center;
   position: relative;
+  transition-delay: 0.3s;
   &__content{
     position: absolute;
-    top: -100px;
+    bottom: 45%;
     max-width: 1346px;
     &-text{
       position: relative;
       transition: 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);;
       span{
         font-family: "Space Grotesk";
-        font-size: 180px;
+        font-size: 140px;
         font-style: normal;
         font-weight: 600;
-        line-height: 145px;
+        line-height: 125px;
         letter-spacing: -9px;
         text-transform: uppercase;
         background: linear-gradient(180deg, #ffffff 0%, rgba(0, 0, 0, 0.00) 100%);
@@ -265,25 +264,19 @@
     aspect-ratio: 16/9;
     width: 100%;
     max-width: 100%;
-    max-height: 100%;
     transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
     transition-delay: 0.3s;
     overflow: hidden;
     z-index: 1;
     position: relative;
-    img{
-      height: 100%;
-      width: 100%;
-    }
   }
   &.active{
     margin-top: 200px;
-      .promo{
-        &__video{
-          max-width: 828px;
-          max-height: 494px;
-          border-radius: 48px;
-        }
+    .promo{
+      &__video{
+        max-width: 35%;
+        border-radius: 48px;
+      }
     }
   }
   .play {

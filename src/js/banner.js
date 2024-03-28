@@ -5,7 +5,7 @@ const header = document.getElementById('header')
 const texts = document.querySelectorAll('.promo__content-text')
 window.onscroll = function() {
   const observer = new IntersectionObserver((entries)=>{
-    if(this.scrollY < 10 && entries[0].isIntersecting){
+    if(this.scrollY < 100 && this.scrollY >= 0 && entries[0].isIntersecting){
       promo.classList.remove('active')
       body.classList.add('lock')
       setTimeout(() => {
@@ -21,21 +21,18 @@ window.onscroll = function() {
   }
   )
   observer.observe(promo)
-  if(this.scrollY < 10 && this.scrollY === 0){
-    setTimeout(() => {
-      showHideEffect( header, 1, 'auto')
-      showHideEffect( promoBtnPlay, 1, 'auto')
-    }, 800);
+  if(this.scrollY < 100 && this.scrollY >= 0){
+    showHideEffect( header, 1, 'auto')
+    showHideEffect( promoBtnPlay, 1, 'auto')
     texts.forEach((text, ind)=>{
-      console.log(text);
       if(ind === 0){
-        styleText(text, -55, 0, 0)
+        styleText(text, -55)
       }
       if(ind === 1){
-        styleText(text, 55, 0, 0)
+        styleText(text, 55)
       }
       if(ind === 2){
-        styleText(text, -55, 0, 0)
+        styleText(text, -55)
       }
     })
   }else{
@@ -60,7 +57,7 @@ function showHideEffect(item, opacity, events){
   item.style.pointerEvents = events
 }
 // style for texts
-function styleText(item, distance, time, opacity) {
+function styleText(item, distance = 55, time = 0, opacity = 0) {
   item.style.transform = `translateX(${distance}%)`;
   item.style.transitionDelay= `${time}s`;
   item.style.opacity= opacity;
