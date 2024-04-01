@@ -6,7 +6,6 @@ const promoBtnPlay = document.getElementById('promo-btn-play')
 const header = document.getElementById('header')
 const texts = document.querySelectorAll('.promo__content-text')
 
-// after scroll page
 if(main){
   main.addEventListener('scroll', (e)=>{
     if(promo){
@@ -18,17 +17,6 @@ if(main){
     }
   })
 }
-
-// after reload page, but scrolled
-window.addEventListener('DOMContentLoaded', ()=>{
-  if(promo && main){
-    if(e.target.scrollTop < 100 && e.target.scrollTop >=0){
-      scrolledTop ()
-    }else{
-      scrolledBottom ()
-    }
-  }
-})
 
 function scrolledTop (){
   promo.classList.remove('active')
