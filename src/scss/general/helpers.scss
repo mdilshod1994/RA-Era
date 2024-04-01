@@ -1,5 +1,16 @@
+html,
+body {
+ height: 100%;
+ overflow: hidden;
+}
+
 .main {
-	// overflow: hidden;
+  contain: paint;
+  overflow-x: hidden;
+  height: 100%;
+  &::-webkit-scrollbar{
+    display: none;
+  }
 }
 
 .wrapper {

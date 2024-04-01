@@ -1,4 +1,5 @@
 const body = document.querySelector('body')
+const main = document.getElementById('main')
 const promo = document.getElementById('promo')
 const promoContent = document.getElementById('promo-content')
 const promoBtnPlay = document.getElementById('promo-btn-play')
@@ -6,19 +7,22 @@ const header = document.getElementById('header')
 const texts = document.querySelectorAll('.promo__content-text')
 
 // after scroll page
-window.onscroll = function() {
-  if(promo){
-    if(this.scrollY < 100 && this.scrollY >= 0){
-      scrolledTop ()
-    }else{
-      scrolledBottom ()
+if(main){
+  main.addEventListener('scroll', (e)=>{
+    if(promo){
+      if(e.target.scrollTop < 100 && e.target.scrollTop >=0){
+        scrolledTop ()
+      }else{
+        scrolledBottom ()
+      }
     }
-  }
+  })
 }
+
 // after reload page, but scrolled
 window.addEventListener('DOMContentLoaded', ()=>{
-  if(promo){
-    if(window.scrollY < 100 && window.scrollY >= 0){
+  if(promo && main){
+    if(e.target.scrollTop < 100 && e.target.scrollTop >=0){
       scrolledTop ()
     }else{
       scrolledBottom ()
@@ -74,3 +78,4 @@ function styleText(item, distance = 55, time = 0, opacity = 0) {
 if(promoContent){
   promoContent.style.top = ` calc(50% - ${promoContent.clientHeight / 2}px)`
 }
+
