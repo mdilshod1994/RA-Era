@@ -1,17 +1,3 @@
-html,
-body {
- height: 100%;
- overflow: hidden;
-}
-
-.main {
-  contain: paint;
-  overflow-x: hidden;
-  height: 100%;
-  &::-webkit-scrollbar{
-    display: none;
-  }
-}
 
 .wrapper {
 	max-width: 1790px;

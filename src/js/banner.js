@@ -1,22 +1,29 @@
 const body = document.querySelector('body')
-const main = document.getElementById('main')
 const promo = document.getElementById('promo')
 const promoContent = document.getElementById('promo-content')
 const promoBtnPlay = document.getElementById('promo-btn-play')
 const header = document.getElementById('header')
 const texts = document.querySelectorAll('.promo__content-text')
 
-if(main){
-  main.addEventListener('scroll', (e)=>{
-    if(promo){
-      if(e.target.scrollTop < 100 && e.target.scrollTop >=0){
-        scrolledTop ()
-      }else{
-        scrolledBottom ()
-      }
+window.addEventListener('scroll', ()=>{
+  if(promo){
+    if(window.scrollY < 100 && window.scrollY >=-10000){
+      scrolledTop ()
+    }else{
+      scrolledBottom ()
     }
-  })
-}
+  }
+})
+
+window.addEventListener('DOMContentLoaded', ()=>{
+  if(promo){
+    if(window.scrollY < 100 && window.scrollY >=-10000){
+      scrolledTop ()
+    }else{
+      scrolledBottom ()
+    }
+  }
+})
 
 function scrolledTop (){
   promo.classList.remove('active')
